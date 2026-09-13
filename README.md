@@ -1,17 +1,12 @@
 # Utkarsh — Portfolio
 
-A single self-contained page. No build step, no dependencies: every image, style and script is inlined into `index.html`, so the site works even if you delete `assets/`.
-
 ```
-index.html              the whole site, self-contained
-assets/photos/          original photographs
-assets/paintings/       original paintings
-assets/certificates/    certificate scans
-assets/cv/              CV as PDF
-.nojekyll               makes GitHub serve files as-is
+index.html      the site
+uploads/        photographs, paintings, certificates, CV (referenced by the gallery tabs)
+.nojekyll       makes GitHub serve files as-is
 ```
 
-`assets/` is kept as the source archive — originals at full resolution, named readably — so the images are versioned alongside the page rather than only living inside it.
+`uploads/` must sit next to `index.html` — the Photographs and Paintings tabs load their images from it at runtime.
 
 ## Publish on GitHub Pages
 
