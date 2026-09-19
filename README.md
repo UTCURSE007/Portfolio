@@ -1,27 +1,47 @@
-# Utkarsh — Portfolio
+# utkarsh — portfolio site
+
+Static site. No build step, no dependencies.
 
 ```
-index.html      the site
-uploads/        photographs, paintings, certificates, CV (referenced by the gallery tabs)
-.nojekyll       makes GitHub serve files as-is
+index.html      the site (renders from content.json)
+content.json    ALL editable content — text, image paths, which tabs are visible
+admin.html      the editor (open it in a browser, edit, export)
+styles.css      design tokens + component classes
+assets/         every image and the CV pdf
 ```
 
-`uploads/` must sit next to `index.html` — the Photographs and Paintings tabs load their images from it at runtime.
+## Publishing
 
-## Publish on GitHub Pages
+Copy the contents of this folder to the repository root and push. GitHub Pages serves it as is.
 
-1. Push the contents of this folder to the default branch:
-   ```
-   git init
-   git add .
-   git commit -m "Portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/<user>/<repo>.git
-   git push -u origin main
-   ```
-2. Repository → Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
-3. The site appears at `https://<user>.github.io/<repo>/`.
+## Editing
 
-## Local preview
+Open `admin.html` **over http** — either the published URL (`…/admin.html`) or locally:
 
-Open `index.html` in any browser, or run `python3 -m http.server` in this folder.
+```
+cd <this folder>
+python -m http.server 8000
+# then open http://localhost:8000/admin.html
+```
+
+Edit anything in the left-hand sections. Changes autosave to the browser's local
+storage, so closing the tab does not lose work.
+
+- **Add images…** on a gallery adds one entry per file you pick.
+- **Preview** opens the real site with your unsaved edits.
+- **Export files to push** downloads `portfolio-update.zip` — `content.json` plus
+  any images you added. Unzip it into the repository root, overwrite, commit, push.
+- **content.json only** downloads just the JSON if you added no new images.
+- **Discard draft** throws away local edits and reloads the published content.
+
+Opening `admin.html` straight off the disk (`file://`) blocks the fetch of
+`content.json` — use **Load JSON…** to open the file manually in that case.
+
+## Notes
+
+- The Curriculum Vitae tab is hidden (`tabs.cv: false` in `content.json`). Its
+  content is still there; flip the switch under **Visible tabs** to bring it back.
+- Poems keep their line breaks exactly as typed. Set **Script** to `devanagari`
+  for Hindi pieces so they set in Tiro Devanagari Hindi.
+- Figure **Fit**: `natural` (full image), `cover`, `contain`, or `rotated`
+  (the quarter-turn shadowgraph treatment).

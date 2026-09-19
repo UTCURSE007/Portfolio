@@ -1,0 +1,438 @@
+{
+  "site": {
+    "brand": "Utkarsh",
+    "kicker": "Propulsion · ISRO",
+    "name": "Utkarsh",
+    "tagline": "Scientist / Engineer ‘SC’ at the Indian Space Research Organization — engine development, transients and the joining technologies behind the propulsion systems",
+    "portrait": "assets/portrait.jpg",
+    "showPortrait": true,
+    "email": "utkarshcri7@gmail.com",
+    "linkedin": "https://linkedin.com/in/utkarspace",
+    "linkedinLabel": "linkedin.com/in/utkarspace",
+    "researchgate": "https://researchgate.net/profile/Utkarsh-Utkarsh-12",
+    "phone": "+91 62045 28605",
+    "location": "Thiruvananthapuram, India",
+    "resume": "assets/Resume-Utkarsh.pdf",
+    "texture": "assets/texture-paper.png"
+  },
+  "tabs": {
+    "about": true,
+    "research": true,
+    "photographs": true,
+    "paintings": true,
+    "writings": true,
+    "cv": false
+  },
+  "figures": [
+    {
+      "value": "06",
+      "label": "Conference papers"
+    },
+    {
+      "value": "119",
+      "label": "GATE Mechanical All India Rank"
+    },
+    {
+      "value": "2023",
+      "label": "At ISRO since"
+    }
+  ],
+  "about": {
+    "heading": "About me and my work",
+    "paragraphs": [
+      "I am twenty-seven. I have always been a curious researcher who loves to investigate and make sense out of the data, experiments and the world around me. Be it a school science project on behavior of migratory birds in my hometown or investigating the engine buildup characteristics, I have tried to dive deep and come out with an understanding.",
+      "My work at ISRO concerns engine development for the Indian space programme: system analysis and the fabrication technologies that make propulsion hardware possible.",
+      "It spans engine cycle and power-balance analysis, start and shutdown transient simulation, pressure-surge modelling, subsystem realisation through additive manufacturing and vacuum brazing, and the critical analysis of test anomalies that turns them into design fixes. Between the simulation and the hardware there is always a test to explain. I like the part where an anomaly trace becomes a design fix — and I take the same habits of attention into research writing and, off the clock, photography.",
+      "I am a Lifetime Member of the Indian Cryogenics Council."
+    ]
+  },
+  "domains": [
+    {
+      "title": "Engine transients",
+      "body": "Chill-down, start and shutdown sequences, pressure surges in fast-pressurised lines."
+    },
+    {
+      "title": "Engine cycle analysis",
+      "body": "Power balance, optimisation and performance prediction."
+    },
+    {
+      "title": "Joining & fabrication",
+      "body": "Vacuum brazing, dissimilar joints and additive manufacturing of subsystems."
+    },
+    {
+      "title": "Test anomalies",
+      "body": "Reading the trace and finding the cause"
+    }
+  ],
+  "field": [
+    {
+      "src": "assets/field-sriharikota.jpg",
+      "caption": "Satish Dhawan Space Centre, Sriharikota."
+    },
+    {
+      "src": "assets/field-ic3mi.jpg",
+      "caption": "Presenting the brazing dynamics work at IC3MI."
+    },
+    {
+      "src": "assets/field-devasthal.jpg",
+      "caption": "A day at Devasthal Optical Telescope"
+    }
+  ],
+  "experience": [
+    {
+      "date": "Aug 2023 — Present",
+      "title": "Scientist / Engineer ‘SC’ — Cryogenic Propulsion",
+      "org": "Liquid Propulsion Systems Centre, ISRO · Thiruvananthapuram",
+      "body": "",
+      "bullets": [
+        "Engine cycle analysis, optimisation and power-balance simulation",
+        "Evaluation of thermal chill-down performance",
+        "Engine start and shutdown sequence transient simulation",
+        "Subsystem development through additive manufacturing and vacuum brazing",
+        "Flight/test performance prediction and data analysis",
+        "Critical analysis of test anomalies"
+      ]
+    },
+    {
+      "date": "Feb 2023 — Jul 2023",
+      "title": "Executive Trainee (Engineer)",
+      "org": "NTPC Limited (Maharatna PSU)",
+      "body": "Operation and maintenance of the fluid and thermal systems of an 800 MW supercritical thermal power plant; including a three-week certification at the National Power Training Institute, Ministry of Power, Faridabad.",
+      "bullets": []
+    },
+    {
+      "date": "Jan 2022 — May 2022",
+      "title": "Product Design Intern",
+      "org": "Indian Railways",
+      "body": "An ergonomic exercise bike for chair cars and waiting rooms, dimensioned from Indian anthropometric percentile data.",
+      "bullets": []
+    },
+    {
+      "date": "May 2021 — Jun 2021",
+      "title": "Research Intern",
+      "org": "Indian Institute of Technology Indore · under Dr. Anand, Dean",
+      "body": "Structural and dynamic study of tennis racket design — frame stiffness, vibration response and material selection.",
+      "bullets": []
+    }
+  ],
+  "publications": {
+    "intro": "Conference papers on brazed joints, thrust-chamber forming and cryogenic transients — three published, three accepted for 2025–26 proceedings.",
+    "items": [
+      {
+        "date": "Dec 2025",
+        "title": "Experimental and Computational Study of Copper–Silver Filler Brazed Joint for Aerospace Applications",
+        "authors": "Utkarsh, Arif M., Santhosh Kumar, Lyjith K.",
+        "venue": "International Conference on Materials, Manufacturing and Management for Industry 4.0",
+        "figures": [
+          {
+            "src": "assets/fig-braze-sem.png",
+            "caption": "SEM, 100× — filler seam between IN718 and CuCrZrTi.",
+            "fit": "cover"
+          },
+          {
+            "src": "assets/fig-braze-md.png",
+            "caption": "MD cell — Cu–Ag interface under an EAM alloy potential.",
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "date": "Dec 2025",
+        "title": "Modelling of Rocket Engine Thrust Chamber Brazing Dynamics",
+        "authors": "Utkarsh, Nithin P., Lyjith K.",
+        "venue": "International Conference on Materials, Manufacturing and Management for Industry 4.0",
+        "figures": [
+          {
+            "src": "assets/fig-dyn-cad.png",
+            "caption": "Thrust chamber assembly — inner and outer shells with the intershell and fixture flexures.",
+            "fit": "natural"
+          },
+          {
+            "src": "assets/fig-dyn-matlab.png",
+            "caption": "MATLAB model — nozzle shells at room and brazing temperature.",
+            "fit": "natural"
+          }
+        ]
+      },
+      {
+        "date": "Apr 2024",
+        "title": "Investigation of Cryogenic Engine Thrust Chamber Forming",
+        "authors": "Utkarsh, Dhanunjaya P., Nithin P., Lyjith K., Arumugam M.",
+        "venue": "International Conference on Advances in Aerospace and Energy Systems (IAES 2024)",
+        "figures": [
+          {
+            "src": "assets/fig-form-segment.png",
+            "caption": "Stress distribution across the drawn segment.",
+            "fit": "contain"
+          },
+          {
+            "src": "assets/fig-form-cone.png",
+            "caption": "Equivalent stress on the assembled cone, 302 MPa peak.",
+            "fit": "contain"
+          }
+        ]
+      },
+      {
+        "date": "Accepted Dec 2026",
+        "title": "Analytical Modelling of Entrapped Gas Driven Diaphragm Rupture Signature in the Start Fuel Ampoule of a Rocket Engine",
+        "authors": "Utkarsh, Adarsh A. N., Varrier M., Bijukumar K. S.",
+        "venue": "24th ISME Conference on Mechanical Engineering, 2026",
+        "figures": []
+      },
+      {
+        "date": "Accepted Dec 2026",
+        "title": "Numerical Modelling of Pressure Surges during Rapid Pressurisation of a Cryogenic Rocket Engine Measurement Canalisation Line",
+        "authors": "Utkarsh, Adarsh A. N., Varrier M., Bijukumar K. S.",
+        "venue": "30th National Conference on Cryogenics & Superconductivity",
+        "figures": []
+      },
+      {
+        "date": "Accepted Dec 2026",
+        "title": "Experimental and Numerical Study of Gas–Gas Interaction of Air–Butane Combusted Flow",
+        "authors": "Utkarsh, Adarsh A. N., Varrier M., Bijukumar K. S.",
+        "venue": "30th National Conference on Cryogenics & Superconductivity",
+        "figures": []
+      }
+    ]
+  },
+  "photographs": {
+    "intro": "Away from the test stand, a camera — mostly birds, and whatever else holds still long enough. Kept here as a contact sheet rather than a gallery.",
+    "items": [
+      {
+        "src": "assets/photo-sunset-lamp-post.jpg",
+        "caption": "The sun going down behind a lamp post"
+      },
+      {
+        "src": "assets/photo-dried-chillies.jpg",
+        "caption": "Dried chillies laid out on a sack"
+      },
+      {
+        "src": "assets/photo-sandalwood.jpg",
+        "caption": "Sandalwood shavings smouldering in an iron pan"
+      },
+      {
+        "src": "assets/photo-peacock-pansy.jpg",
+        "caption": "Peacock pansy, wings half shut"
+      },
+      {
+        "src": "assets/photo-puppy.jpg",
+        "caption": "A puppy crossing the yard at noon"
+      },
+      {
+        "src": "assets/photo-night-heron.jpg",
+        "caption": "Juvenile black-crowned night heron in the reeds"
+      },
+      {
+        "src": "assets/photo-egret-hyacinth.webp",
+        "caption": "Egret standing in the water hyacinth"
+      },
+      {
+        "src": "assets/photo-squirrel.jpg",
+        "caption": "A squirrel, mostly hidden"
+      },
+      {
+        "src": "assets/photo-peace-and-chaos.webp",
+        "caption": "Peace and Chaos"
+      },
+      {
+        "src": "assets/photo-leopard.webp",
+        "caption": "Leopard on a log, looking away"
+      },
+      {
+        "src": "assets/photo-darter.webp",
+        "caption": "Darter preening over the nest"
+      },
+      {
+        "src": "assets/photo-egret-tideline.webp",
+        "caption": "Egret walking the tideline"
+      },
+      {
+        "src": "assets/photo-kingfisher.webp",
+        "caption": "White-throated kingfisher on a railing"
+      },
+      {
+        "src": "assets/photo-purple-sunbird.png",
+        "caption": "Purple sunbird calling from a thorn"
+      }
+    ]
+  },
+  "paintings": {
+    "intro": "Acrylic and watercolour on canvas board — mostly orbits, launches and the gods who watch them.",
+    "items": [
+      {
+        "src": "assets/painting-harnessing-wind.webp",
+        "caption": "Harnessing wind in space"
+      },
+      {
+        "src": "assets/painting-shiva-lunar.webp",
+        "caption": "Shiva in meditation on the lunar surface"
+      },
+      {
+        "src": "assets/painting-krishna-radha.webp",
+        "caption": "Krishna with the flute alongside Radha"
+      },
+      {
+        "src": "assets/painting-beginning-end.webp",
+        "caption": "The Beginning and the End"
+      },
+      {
+        "src": "assets/painting-future-drive.webp",
+        "caption": "The Future Drive"
+      },
+      {
+        "src": "assets/painting-diwali-nalanda.webp",
+        "caption": "Diwali at Nalanda University"
+      },
+      {
+        "src": "assets/painting-black-hole-date.webp",
+        "caption": "A Black Hole Date"
+      },
+      {
+        "src": "assets/painting-zillion-body.webp",
+        "caption": "Zillion Body Problem"
+      },
+      {
+        "src": "assets/painting-vortex.webp",
+        "caption": "Vortex around 'her'"
+      }
+    ]
+  },
+  "writings": {
+    "intro": "Poems, mostly written in transit — physics borrowed as a love language, and the occasional rock that refuses to explain itself.",
+    "items": [
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "Black Hole Date",
+        "cover": "assets/painting-black-hole-date.webp",
+        "coverCaption": "A Black Hole Date — acrylic",
+        "note": "",
+        "script": "latin",
+        "body": "This weekend, black hole date?\nMy right hand\nYour left hand\nCriscrossed like\nSpace and time\nThen you may lower\nYour head on my shoulder\nIn the slowed down time\nLets forget this rhyme\nIn the slowed down time\nWe'll caress\nWe'll float\nWe'll spin\nWe'll dance\nWe'll hug\nWe'll cry\nWe'll helmet-kiss\nAnd then we'll return\nTo our lovely Earth\nMaybe mankind will be gone\nLets hope no Jurassic world\nAnd no alien colony\nWe'll start from zero\nBaby I will be your Adam\nYou be my Eve\nWe'll make a new world\nWithout hatred\nWithout the system of caste\nColor, creed and race\nWithout the dirt in Ganga\nAnd carbon in the air\nWhen all will be sorted\nWe'll fly to yet another\nBlack hole date"
+      },
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "Dimples on the Rock",
+        "cover": "assets/writing-dimples.png",
+        "coverCaption": "The rock in question.",
+        "note": "",
+        "script": "latin",
+        "body": "Dimples on the rock...\nDid it come from lightning strikes?\nOr maybe some degenerating meteor hit it...\nNow hitting the softer note...\nIt must be a prehistoric human's hut fixture\nOhh common, its easy...\nIts the remnant of porosities in lava\nOr is it? Maybe we can settle down now\nAnd accept that the whole rock fell from space\nAnd those pits are the regmaglypts!\nBut that seems too crazy\nAnd hazy (why am I rhyming unnecessarily?)\nBack to the question\nCant it just be due to the aftermath..\nOf some fierce alien-human bullet fight?\nWait, we are going too far here...\nI really think its the thousands of years of..\ncooling and heating led to some incredible...\nrock solid mechanics phenomena\nOr just denudation due to high winds\nI am no geoscience expert\nThough my final conclusion shall be shared\nI feel why do we care?\nAre we after the truth here?\nDoes the rock care its having dimples?\nOr the dimples care its on the rock?\nLike this rock, shall I leave you to a cliffhanger?\nOhh yes, great idea, its a banger! (shit I rhymed again)"
+      },
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "Spinning Her",
+        "cover": "assets/painting-vortex.webp",
+        "coverCaption": "Vortex around 'her' — acrylic",
+        "note": "",
+        "script": "latin",
+        "body": "She spun at her axis\nLike a crazy table top\nAnd made a warp in spacetime\nFor me to fall into\nGradually her spin changed\nShe settled\nHer axis tilted\nAlignment reset\nCoordinates shifted\nBut the warp she'd created\nstood still,\nHeartless and pale.\nI checked twice,\nShe wasnt there...\nThe warp remained\nLike a plastic perturbation\nTheoretically its a 'no escape'\nSo I kept falling in\nEver and forever"
+      },
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "रेल और तुम",
+        "cover": "",
+        "coverCaption": "",
+        "note": "In Hindi",
+        "script": "devanagari",
+        "body": "रेल के ऊपर दौड़ते डिब्बे,\nएक डिब्बे के अंदर मैं,\nमेरे दाएं खिड़की से…\nदिखते खूबसूरत नजारे\nलेकिन उससे कहीं सुरम्य\nमेरे बाएं बैठी तुम\nतुम्हारी मुस्कान से ही\nयह रेल दौड़ रही\nतुम चुप हो जाओ\nतो डिब्बे बेपटरी हो जाएं\nरेल तो क्या ब्रह्मांड रुक जाए\nतुम पलके झपकती हो\nतो हवा बह उठती है\nतुम्हारे बाल फेरने से\nपृथ्वी नाच उठती है\nतुम्हारी जो यह बिंदी है\nसारा संसार इसकी ही\nपरिक्रमा कर रहा है\nतुम गर यह बिंदी उतार दो\nब्रह्म का सर्वनाश हो उठे\nऔर जो तुम्हारी कान की बाली है\nकहते हैं उसके अंदर से\nनिकलता है एक वर्महोल\nजो जुड़ता है तुम्हारी\nसुनहरी नाक की बाली से\nजाने कितनी ही उम्मीदें\nलुप्त हो चुकी उनमें\nतुम यूं ही मुस्कुराते रहो\nसंसार चलता रहेगा।"
+      }
+    ]
+  },
+  "cv": {
+    "education": [
+      {
+        "date": "2018 — 2022",
+        "title": "B.Tech., Production Engineering",
+        "meta": "Birla Institute of Technology, Mesra · CGPA 8.59 / 10, First Class with Distinction"
+      },
+      {
+        "date": "2017",
+        "title": "Senior Secondary (CBSE)",
+        "meta": "Shivam Public School, Nalanda · 86.8%"
+      },
+      {
+        "date": "2015",
+        "title": "Secondary (CBSE)",
+        "meta": "Jawahar Navodaya Vidyalaya, Nalanda · 10.0 CGPA"
+      }
+    ],
+    "skills": [
+      {
+        "label": "Domains",
+        "value": "Cryogenic propulsion · Vacuum brazing & dissimilar joining · System engineering · Aerospace materials · Structural & thermal FEA · Ergonomics"
+      },
+      {
+        "label": "Advanced",
+        "value": "SolidWorks, mechanical design"
+      },
+      {
+        "label": "Intermediate",
+        "value": "ANSYS Workbench & Fluent, additive manufacturing"
+      },
+      {
+        "label": "Basic",
+        "value": "Python, MATLAB, C, CATIA V5, Abaqus"
+      }
+    ],
+    "honours": [
+      {
+        "title": "GATE (Mechanical) — All India Rank 119",
+        "meta": "2023; AIR 211 in 2022, among some 100,000 candidates."
+      },
+      {
+        "title": "Runner-up, Institute Innovation Contest",
+        "meta": "BIT Mesra, 2020 — an ergonomic ground chair for street vegetable vendors; second best innovation of the university."
+      },
+      {
+        "title": "Runner-up, Campus Innovathon",
+        "meta": "2020 — a podium finish among 2,000 teams for a sustainable fuel-retail station design."
+      }
+    ],
+    "projects": [
+      {
+        "title": "Machine Learning for Profile Deviation Detection",
+        "meta": "LPSC, ISRO · A machine-vision model that infers profile deviation on a cylindrical body from the centroid and apparent area of randomly applied markers — a lab-scale stand-in for real-time profile monitoring of rocket hardware after forming, rolling, brazing and pressure tests.",
+        "src": "assets/project-ml-markers.png",
+        "caption": "Marker centroid and apparent area across eleven angular positions on a 114 mm cylinder."
+      },
+      {
+        "title": "GARUD — Electric Formula Student Racecar",
+        "meta": "Team Srijan, BIT Mesra, 2019–21 · Design Executive, Chassis & Ergonomics. Spaceframe chassis, cockpit, headrest, seat, steering wheel, motor test rig and welding fixture. 10th overall and 10th in engineering design at Formula Bharat 2021 — the only first-year car in the top ten.",
+        "src": "assets/project-garud.jpg",
+        "caption": "GARUD on track at Formula Bharat, Coimbatore."
+      },
+      {
+        "title": "Society for Industrial Management and Engineering",
+        "meta": "Co-founder & Joint President, 2020–22 — founded and led a 100+ member technical society at BIT Mesra.",
+        "src": "assets/project-sime-talk.jpg",
+        "caption": "Opening a society session at BIT Mesra."
+      }
+    ],
+    "certificates": [
+      {
+        "src": "assets/cert-solidworks.png",
+        "title": "Mechanical Design Associate",
+        "meta": "Dassault Systèmes SolidWorks · December 2020"
+      },
+      {
+        "src": "assets/cert-innovation.png",
+        "title": "Institute's Innovation Contest 2020",
+        "meta": "Second position, Institution's Innovation Council, BIT Mesra"
+      },
+      {
+        "src": "assets/cert-sime.png",
+        "title": "Founder Joint Secretary, SIME",
+        "meta": "Society for Industrial Management and Engineering, BIT Mesra"
+      },
+      {
+        "src": "assets/cert-formula-bharat.png",
+        "title": "Formula Bharat 2021",
+        "meta": "Team Srijan Electric, participation certificate"
+      }
+    ]
+  }
+}
