@@ -40,7 +40,7 @@
   "about": {
     "heading": "About me and my work",
     "paragraphs": [
-      "I am twenty-seven. I have always been a curious researcher who loves to investigate and make sense out of the data, experiments and the world around me. Be it a school science project on behavior of migratory birds in my hometown or investigating the engine buildup characteristics, I have tried to dive deep and come out with an understanding.",
+      "I have always been a curious researcher who loves to investigate and make sense out of the data, experiments and the world around me. Be it a school science project on behavior of migratory birds in my hometown or investigating the engine buildup characteristics, I have tried to dive deep and come out with an understanding.",
       "My work at ISRO concerns engine development for the Indian space programme: system analysis and the fabrication technologies that make propulsion hardware possible.",
       "It spans engine cycle and power-balance analysis, start and shutdown transient simulation, pressure-surge modelling, subsystem realisation through additive manufacturing and vacuum brazing, and the critical analysis of test anomalies that turns them into design fixes. Between the simulation and the hardware there is always a test to explain. I like the part where an anomaly trace becomes a design fix — and I take the same habits of attention into research writing and, off the clock, photography.",
       "I am a Lifetime Member of the Indian Cryogenics Council."
@@ -374,7 +374,7 @@
     "skills": [
       {
         "label": "Domains",
-        "value": "Cryogenic propulsion · Vacuum brazing & dissimilar joining · System engineering · Aerospace materials · Structural & thermal FEA · Ergonomics"
+        "value": "Rocket propulsion · Vacuum brazing & dissimilar joining · System engineering · Aerospace materials · Structural & thermal FEA · Ergonomics"
       },
       {
         "label": "Advanced",
