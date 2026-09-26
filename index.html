@@ -80,15 +80,15 @@
   html[data-theme="dark"] .gallery::before { content: ""; position: absolute; inset: 0; background: rgba(26,25,24,.84); pointer-events: none; }
   html[data-theme="dark"] .gallery > * { position: relative; }
   html[data-theme="dark"] .plate { filter: brightness(.94); }
-  .rail { position: fixed; left: var(--space-3); top: 50%; transform: translateY(-50%); z-index: 40; display: flex; flex-direction: column; gap: var(--space-2); }
-  .rail-btn { width: 52px; height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 1px solid var(--color-accent); border-radius: var(--radius-md, 4px); background: var(--color-bg); color: var(--color-accent-700); cursor: pointer; padding: 0; position: relative; box-shadow: var(--shadow-md); transition: border-color .2s, color .2s, transform .2s, box-shadow .2s; }
-  .rail-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md), 0 0 0 3px color-mix(in srgb, var(--color-accent) 22%, transparent); }
+  .rail { display: flex; flex-direction: row; align-items: center; gap: var(--space-2); margin-right: auto; }
+  .rail-btn { height: 34px; min-width: 34px; padding: 0 10px; display: inline-flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--color-accent); border-radius: var(--radius-md, 4px); background: transparent; color: var(--color-accent-700); cursor: pointer; position: relative; font-family: var(--font-body); transition: background .2s, color .2s, transform .2s, box-shadow .2s; }
+  .rail-btn:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent); }
   .rail-btn:hover { border-color: var(--color-accent); color: var(--color-accent-700); }
   .rail-btn:active { background: var(--color-accent-100); }
   html[data-theme="dark"] .rail-btn:active { background: var(--color-neutral-300); }
-  .rail-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-  .lang-pop { position: absolute; left: calc(100% + var(--space-3)); top: 50%; transform: translateY(-50%) translateX(-6px); width: 300px; max-height: min(78vh, 560px); overflow: auto; background: var(--color-bg); border: 1px solid var(--color-divider); box-shadow: var(--shadow-md); padding: var(--space-4) var(--space-4) var(--space-3); opacity: 0; visibility: hidden; transition: opacity .22s ease, transform .28s cubic-bezier(.2,.7,.2,1), visibility 0s .28s; }
-  .lang-pop.open { opacity: 1; visibility: visible; transform: translateY(-50%); transition: opacity .22s ease, transform .28s cubic-bezier(.2,.7,.2,1); }
+  .rail-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .lang-pop { position: absolute; left: 50%; top: calc(100% + var(--space-3)); transform: translateX(-50%) translateY(-6px); z-index: 30; width: 320px; max-height: min(74vh, 560px); overflow: auto; background: var(--color-bg); border: 1px solid var(--color-divider); box-shadow: var(--shadow-md); padding: var(--space-4) var(--space-4) var(--space-3); opacity: 0; visibility: hidden; transition: opacity .22s ease, transform .28s cubic-bezier(.2,.7,.2,1), visibility 0s .28s; }
+  .lang-pop.open { opacity: 1; visibility: visible; transform: translateX(-50%); transition: opacity .22s ease, transform .28s cubic-bezier(.2,.7,.2,1); }
   .lang-pop h5 { margin: 0 0 var(--space-2); font-size: 10px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); }
   .lang-pop .grp + h5 { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--color-divider); }
   .lang-pop .grp { display: grid; grid-template-columns: 1fr 1fr; gap: 2px var(--space-3); }
@@ -101,10 +101,10 @@
   .lang-opt[aria-current="true"] { border-bottom-color: var(--color-accent); }
   .lang-opt[aria-current="true"] .nat { color: var(--color-accent-700); font-style: italic; }
   .lang-note { margin: var(--space-3) 0 0; font-size: 10px; color: var(--color-neutral-600); letter-spacing: .04em; }
-  @media (max-width: 1140px) { .lang-pop { top: auto; bottom: 0; transform: translateX(-6px); } .lang-pop.open { transform: none; } }
-  @media (max-width: 420px) { .lang-pop { width: calc(100vw - 80px); } .lang-pop .grp { grid-template-columns: 1fr; } }
-  .rail-code, .rail-lbl { font-size: 9px; line-height: 1; letter-spacing: .12em; text-transform: uppercase; font-feature-settings: 'tnum'; pointer-events: none; }
-  @media (max-width: 1140px) { .rail { top: auto; bottom: var(--space-3); transform: none; } }
+  @media (max-width: 640px) { .lang-pop { position: fixed; left: var(--space-3); right: var(--space-3); width: auto; top: 64px; transform: translateY(-6px); } .lang-pop.open { transform: none; } }
+  @media (max-width: 420px) { .lang-pop .grp { grid-template-columns: 1fr; } }
+  .rail-code, .rail-lbl { font-size: 11px; line-height: 1; letter-spacing: .12em; text-transform: uppercase; font-feature-settings: 'tnum'; pointer-events: none; }
+  @media (max-width: 640px) { .rail-lbl { display: none; } .rail-btn { padding: 0 8px; } }
   body > .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame, .VIpgJd-ZVi9od-ORHb-OEVmcd { display: none !important; }
   body { top: 0 !important; }
   font[style] { background: none !important; box-shadow: none !important; }
@@ -169,6 +169,8 @@ function renderChrome() {
     '<span class="nav-brand" style="letter-spacing:.14em;text-transform:uppercase;font-size:15px">' + e(s.brand) + "</span>" +
     TABS.filter(([k]) => C.tabs[k] !== false).map(([k, label]) =>
       '<a href="#' + k + '"' + (tab === k ? ' aria-current="page"' : "") + ">" + e(label) + "</a>").join("");
+  const nav = document.getElementById("nav"), rail = document.querySelector(".rail");
+  if (rail) nav.insertBefore(rail, nav.children[1]);
 
   document.getElementById("header").innerHTML =
     '<canvas id="orbits" aria-hidden="true"></canvas>' +
