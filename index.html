@@ -165,11 +165,12 @@ function go(t) { location.hash = t; }
 
 function renderChrome() {
   const s = C.site;
+  window.__rail = window.__rail || document.querySelector(".rail");
   document.getElementById("nav").innerHTML =
     '<span class="nav-brand" style="letter-spacing:.14em;text-transform:uppercase;font-size:15px">' + e(s.brand) + "</span>" +
     TABS.filter(([k]) => C.tabs[k] !== false).map(([k, label]) =>
       '<a href="#' + k + '"' + (tab === k ? ' aria-current="page"' : "") + ">" + e(label) + "</a>").join("");
-  const nav = document.getElementById("nav"), rail = document.querySelector(".rail");
+  const nav = document.getElementById("nav"), rail = window.__rail;
   if (rail) nav.insertBefore(rail, nav.children[1]);
 
   document.getElementById("header").innerHTML =
