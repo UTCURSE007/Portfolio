@@ -89,9 +89,7 @@
   .egrets { flex: 0 1 300px; width: 100%; max-width: 340px; height: auto; color: var(--color-text); }
   .egrets .eg-acc { stroke: var(--color-accent); }
   .egrets .eg-water { stroke: var(--color-accent-700); }
-  .egrets > g:not(.eg-water) { animation: egretBob 6s ease-in-out infinite; transform-box: fill-box; }
-  @keyframes egretBob { 0%,100% { translate: 0 0; } 50% { translate: 0 1.5px; } }
-  @media (prefers-reduced-motion: reduce) { .egrets > g { animation: none; } }
+
   .pin { position: absolute; width: 11px; height: 11px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle at 35% 30%, #f3dfb4 0 18%, #c7944a 40%, #7a5420 100%); box-shadow: 1px 2px 2px rgba(32,31,29,.35), 0 0 0 1px rgba(90,60,20,.35); }
   .pin::after { content: ""; position: absolute; left: 6px; top: 7px; width: 5px; height: 2px; background: rgba(32,31,29,.18); filter: blur(1px); transform: rotate(35deg); }
   html[data-theme="dark"] .gallery { position: relative; }
@@ -246,6 +244,7 @@ function render() {
   m.innerHTML = ({ album: albumHTML, about: aboutHTML, research: researchHTML, photographs: photoHTML, paintings: paintHTML, writings: writingsHTML, cv: cvHTML })[tab]();
   m.querySelectorAll("[data-go]").forEach((n) => n.addEventListener("click", (ev) => { ev.preventDefault(); go(n.dataset.go); }));
   m.querySelectorAll("[data-zoom]").forEach((n) => n.addEventListener("click", () => openLightbox(n.dataset.zoom, n.dataset.cap, n.dataset.list, +n.dataset.i)));
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) m.querySelectorAll("svg.egrets").forEach((s) => s.pauseAnimations && s.pauseAnimations());
   m.querySelectorAll("[data-expand]").forEach((n) => n.addEventListener("click", () => {
     const body = document.getElementById(n.dataset.expand);
     const open = body.classList.toggle("clamped");
@@ -332,11 +331,11 @@ function slideshowHTML(list, tone, ratio) {
 }
 
 function photoHTML() {
-  const g = C.photographs;
-  return '<section class="gallery" style="background-image:radial-gradient(120% 80% at 50% 0%, rgba(255,253,248,.9) 0%, rgba(236,232,224,.85) 55%, rgba(226,221,211,.9) 100%), url(&quot;' + e(C.site.texture) + '&quot;);box-shadow:inset 0 1px 0 rgba(255,255,255,.7), inset 0 -40px 60px -50px rgba(32,31,29,.4)">' +
+  const g = C.photographs, al = C.albums || [];
+  return (al.length ? '<section style="margin:0 0 var(--space-10, 64px)"><p class="kicker" style="margin:0 0 var(--space-3)">Albums</p>' + al.map(albumCard).join("") + '</section>' : "") +
+    '<section class="gallery" style="background-image:radial-gradient(120% 80% at 50% 0%, rgba(255,253,248,.9) 0%, rgba(236,232,224,.85) 55%, rgba(226,221,211,.9) 100%), url(&quot;' + e(C.site.texture) + '&quot;);box-shadow:inset 0 1px 0 rgba(255,255,255,.7), inset 0 -40px 60px -50px rgba(32,31,29,.4)">' +
     '<h2 class="h2" style="margin-bottom:var(--space-2)">Photographs</h2>' +
     '<p style="font-size:15px;line-height:1.7;max-width:34em;margin:0 0 var(--space-8)">' + e(g.intro) + "</p>" +
-    (C.albums || []).map(albumCard).join("") +
     slideshowHTML(g.items, "photo") +
     '<div style="column-width:200px;column-count:3;column-gap:var(--space-6)">' +
     g.items.map((p, i) => {
@@ -359,6 +358,32 @@ function albumCard(a) {
     "</div></a>";
 }
 
+
+function egretSVG() {
+  const T = 2.8, sp = 'calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"';
+  const rot = (a, cx, cy, dur, b) => '<animateTransform attributeName="transform" type="rotate" values="' + (-a) + ' ' + cx + ' ' + cy + ';' + a + ' ' + cx + ' ' + cy + ';' + (-a) + ' ' + cx + ' ' + cy + '" dur="' + dur + 's" begin="' + b + 's" ' + sp + '/>';
+  const bob = (b) => '<animateTransform attributeName="transform" type="translate" values="0 0;0 1.8;0 0" dur="' + T / 2 + 's" begin="' + b + 's" ' + sp + '/>';
+  const body = '<path d="M95 120 C110 104 150 104 168 121 C176 130 172 140 160 142 C140 146 112 141 95 120 Z"/><path d="M150 112 C160 116 166 124 166 132" opacity=".5"/><path d="M164 134 C180 141 192 150 202 162 M160 139 C174 147 184 156 190 166" opacity=".7"/>';
+  const bird = (neck, nA, nx, ny, legA, legB, b) => '<g>' + bob(b) + body +
+    '<g>' + rot(nA, nx, ny, T, b) + neck + '</g>' +
+    '<g>' + rot(8, 128, 142, T, b) + '<path d="' + legA + '"/></g>' +
+    '<g>' + rot(8, 139, 141, T, b - T / 2) + '<path d="' + legB + '"/></g></g>';
+  const b1 = bird('<path d="M100 120 C86 112 76 120 72 134 C70 142 70 148 72 152"/><path d="M72 152 C66 154 64 160 68 163 C72 166 78 162 77 156"/><circle cx="71" cy="157.5" r=".9" fill="currentColor"/><path class="eg-acc" d="M68 162 L58 186 L70 163"/>', 6, 100, 120,
+    'M128 142 L126 178 L128 228 M128 228 l-9 3 M128 228 l8 2', 'M138 142 L152 176 L144 224 M144 224 l-8 4 M144 224 l9 1', -1.1);
+  const b2 = bird('<path d="M100 118 C88 106 98 92 92 80 C87 69 90 60 99 56"/><path d="M99 56 C94 50 100 44 106 47 C111 50 109 58 102 59"/><circle cx="101" cy="51" r=".9" fill="currentColor"/><path class="eg-acc" d="M97 50 L66 55 L97 55"/>', 4, 100, 118,
+    'M128 142 L127 180 L129 212 M129 212 l-10 3 M129 212 l9 2', 'M139 141 L154 172 L146 206 M146 206 l-9 3 M146 206 l9 1', 0);
+  const flow = (y, x1, x2, dash, sum, dur, op) => '<path d="M' + x1 + ' ' + y + ' H' + x2 + '" stroke-dasharray="' + dash + '" opacity="' + op + '"><animate attributeName="stroke-dashoffset" from="0" to="' + (-sum) + '" dur="' + dur + 's" repeatCount="indefinite"/></path>';
+  const ring = (cx, b) => '<ellipse cx="' + cx + '" cy="213" rx="2" ry=".8"><animate attributeName="rx" values="2;16" dur="' + T + 's" begin="' + b + 's" repeatCount="indefinite"/><animate attributeName="ry" values=".8;3.2" dur="' + T + 's" begin="' + b + 's" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="' + T + 's" begin="' + b + 's" repeatCount="indefinite"/></ellipse>';
+  const water = '<g class="eg-water">' +
+    flow(212, 10, 330, "120 6 40 8 70 6", 250, 9, 1) +
+    flow(219, 40, 310, "26 18 10 30", 84, 4.2, .55) +
+    flow(226, 20, 320, "14 22 34 26", 96, 5.4, .45) +
+    flow(233, 60, 290, "8 26 20 30", 84, 6.6, .35) +
+    flow(241, 90, 250, "18 30", 48, 7.4, .25) +
+    ring(129, 0) + ring(147, -T / 2) + ring(273, -1.1) + ring(286, -1.1 - T / 2) + '</g>';
+  return '<svg class="egrets" viewBox="0 0 340 250" role="img" aria-label="Line drawing of two egrets wading through flowing water" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">' +
+    '<g transform="translate(168 22) scale(.82)">' + b1 + '</g>' + b2 + water + '</svg>';
+}
 function albumHTML() {
   const a = album;
   return '<section style="position:relative">' +
@@ -367,7 +392,7 @@ function albumHTML() {
     '<h1 style="font-size:clamp(44px,7.5vw,92px);font-weight:400;line-height:.98;text-wrap:balance;letter-spacing:-.02em;margin:0 0 var(--space-4)">' + e(a.title) + '<span class="rule"></span></h1>' +
     '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-6) var(--space-8);margin:0 0 var(--space-8)">' +
       '<div style="flex:1 1 380px;min-width:0;font-size:16px;line-height:1.75;text-wrap:pretty">' + a.intro.split(/\n\s*\n/).map((p) => '<p style="margin:0 0 var(--space-3)">' + e(p) + '</p>').join("") + '</div>' +
-      '<svg class="egrets" viewBox="0 0 340 250" role="img" aria-label="Line drawing of two egrets wading in shallow water" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(150 22) scale(.82)"><g><path d="M95 120 C110 104 150 104 168 121 C176 130 172 140 160 142 C140 146 112 141 95 120 Z"/><path d="M150 112 C160 116 166 124 166 132" opacity=".5"/><path d="M164 134 C180 141 192 150 202 162 M160 139 C174 147 184 156 190 166" opacity=".7"/><path d="M100 120 C86 112 76 120 72 134 C70 142 70 148 72 152"/><path d="M72 152 C66 154 64 160 68 163 C72 166 78 162 77 156"/><circle cx="71" cy="157.5" r=".9" fill="currentColor"/><path class="eg-acc" d="M68 162 L58 186 L70 163"/><path d="M128 142 L126 178 L128 228 M128 228 l-9 3 M128 228 l8 2 M138 142 L152 176 L144 224 M144 224 l-8 4 M144 224 l9 1"/></g></g><g><path d="M95 120 C110 104 150 104 168 121 C176 130 172 140 160 142 C140 146 112 141 95 120 Z"/><path d="M150 112 C160 116 166 124 166 132" opacity=".5"/><path d="M164 134 C180 141 192 150 202 162 M160 139 C174 147 184 156 190 166" opacity=".7"/><path d="M100 118 C88 106 98 92 92 80 C87 69 90 60 99 56"/><path d="M99 56 C94 50 100 44 106 47 C111 50 109 58 102 59"/><circle cx="101" cy="51" r=".9" fill="currentColor"/><path class="eg-acc" d="M97 50 L66 55 L97 55"/><path d="M128 142 L127 180 L129 212 M129 212 l-10 3 M129 212 l9 2 M139 141 L154 172 L146 206 M146 206 l-9 3 M146 206 l9 1"/></g><g class="eg-water"><path d="M10 212 H330"/><path d="M106 212 C116 208 140 208 152 212 M120 219 C130 216 146 216 156 219" opacity=".6"/><path d="M200 222 C212 219 236 219 248 222 M212 228 C222 226 236 226 244 228" opacity=".6"/><path d="M129 216 L128 236 M146 216 L152 232 M253 224 L252 240 M266 224 L272 238" stroke-dasharray="2 4" opacity=".45"/><path d="M30 224 H86 M178 236 H222 M262 232 H318 M60 242 H140" opacity=".35"/></g></svg>' +
+      egretSVG() +
     '</div>' +
     slideshowHTML(a.items, "photo", "3/2") +
     '<div style="column-width:220px;column-count:3;column-gap:var(--space-6)">' +
@@ -496,16 +521,21 @@ function openLightbox(src, cap, listKey, idx) {
 }
 function drawLightbox(src, cap, fresh) {
   const box = document.getElementById("lightbox");
+  const de = document.documentElement, W = de.clientWidth || innerWidth, H = de.clientHeight || innerHeight, rot = W <= 760 && H > W;
+  const pw = rot ? H : W, ph = rot ? W : H;
   const btn = (attr, label) => '<button class="btn btn-secondary" ' + attr + ' style="white-space:nowrap;width:max-content;height:auto;cursor:pointer;background:var(--color-neutral-100)">' + label + "</button>";
-  box.innerHTML = '<div class="dialog-backdrop' + (fresh ? " lb" : "") + '" style="position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:var(--space-6);background:rgba(32,31,29,.72)">' +
-    '<div style="max-width:min(1000px,92vw);max-height:90vh;display:flex;flex-direction:column;gap:var(--space-3)">' +
-    '<div role="img" aria-label="' + e(cap) + '" style="width:min(1000px,92vw);height:74vh;background-image:url(&quot;' + e(src) + '&quot;);background-size:contain;background-position:center;background-repeat:no-repeat;background-color:var(--color-neutral-100);padding:10px;border:1px solid var(--color-neutral-300);box-shadow:var(--shadow-lg)"></div>' +
-    '<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-3)">' +
+  box.innerHTML = '<div class="dialog-backdrop' + (fresh ? " lb" : "") + '" style="position:fixed;inset:0;z-index:50;background:rgba(20,19,18,.94);overflow:hidden">' +
+    '<div style="position:absolute;left:50%;top:50%;width:' + pw + 'px;height:' + ph + 'px;transform:translate(-50%,-50%)' + (rot ? ' rotate(90deg)' : '') + ';display:flex;flex-direction:column;gap:' + (rot ? '6px' : 'var(--space-3)') + ';padding:' + (rot ? '8px 14px' : '20px 28px') + ' !important;box-sizing:border-box;margin:0">' +
+    '<img src="' + e(src) + '" alt="' + e(cap) + '" style="flex:1 1 auto;min-height:0;width:100%;height:100%;object-fit:contain;display:block">' +
+    '<div style="flex:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-3)">' +
     '<p style="margin:0;font-size:13px;line-height:1.5;color:var(--color-neutral-200);flex:1 1 200px">' + e(cap) + (LB ? ' <span style="color:var(--color-neutral-400);font-feature-settings:\'tnum\'">· ' + (LB.i + 1) + " / " + LB.list.length + "</span>" : "") + "</p>" +
     '<div style="display:flex;gap:var(--space-2)">' + (LB ? btn('data-lb="-1"', "‹ Previous") + btn('data-lb="1"', "Next ›") : "") + btn('data-close', "Close") + "</div></div></div></div>";
   box.querySelector(".dialog-backdrop").addEventListener("click", (ev) => { if (!ev.target.closest("[data-lb]")) { box.innerHTML = ""; LB = null; } });
   box.querySelectorAll("[data-lb]").forEach((b) => b.onclick = () => stepLightbox(+b.dataset.lb));
+  LBcur = { src, cap };
 }
+let LBcur = null;
+addEventListener("resize", () => { if (LBcur && document.getElementById("lightbox").innerHTML) drawLightbox(LBcur.src, LBcur.cap, false); });
 function stepLightbox(d) {
   if (!LB) return;
   LB.i = (LB.i + d + LB.list.length) % LB.list.length;
@@ -682,6 +712,7 @@ function orbits() {
 
   addEventListener("pointerdown", (ev) => {
     if (ev.button !== undefined && ev.button !== 0) return;
+    if (location.hash.startsWith("#album/")) return;
     spawn(ev.clientX, ev.clientY);
   }, true);
 })();
