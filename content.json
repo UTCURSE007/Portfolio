@@ -445,5 +445,97 @@
         "meta": "Team Srijan Electric, participation certificate"
       }
     ]
-  }
+  },
+  "albums": [
+    {
+      "id": "flamingo",
+      "title": "Flamingos from Rocket Waters",
+      "released": "November 2026",
+      "place": "Pulicat Lake · Sriharikota",
+      "intro": "In the lap of the historic spaceport of Sriharikota, run by India's space agency ISRO, lies a beautiful ecosystem in the Pulicat Lake. The lake hosts a wide variety of birds and aquatic creatures. The work was inspired by Prof. Satish Dhawan (former Chairman, ISRO), who spent quite some time at the lake studying bird flight and later released a book on the topic.\n\nThe photos cover birds like the Flamingo, Painted Stork and others. They spend a great deal of the day combing through the water for their meal. While shooting these birds with the spaceport in the background, I was constantly thinking about what the rocket launches meant for them. Do they ever think to sit on one? Do they ever chase the rocket? I hope to cover more of them in future, perhaps with a rocket launch in the background.",
+      "cover": "assets/flamingo/UTK_0706.jpg",
+      "items": [
+        {
+          "src": "assets/flamingo/UTK_0706.jpg",
+          "caption": "The flock, mangroves behind"
+        },
+        {
+          "src": "assets/flamingo/UTK_0711.jpg",
+          "caption": "Greater flamingos, feeding"
+        },
+        {
+          "src": "assets/flamingo/UTK_0719.jpg",
+          "caption": "A busy rush in the meal hour"
+        },
+        {
+          "src": "assets/flamingo/UTK_0745.jpg",
+          "caption": "An egret crosses; the flock feeds on"
+        },
+        {
+          "src": "assets/flamingo/UTK_0593.jpg",
+          "caption": "Great egret lifting off"
+        },
+        {
+          "src": "assets/flamingo/UTK_0616.jpg",
+          "caption": "Great egret across the haze"
+        },
+        {
+          "src": "assets/flamingo/UTK_0548.jpg",
+          "caption": "Little egret, mid-stride"
+        },
+        {
+          "src": "assets/flamingo/UTK_0555.jpg",
+          "caption": "Cormorant and little egret"
+        },
+        {
+          "src": "assets/flamingo/UTK_0671.jpg",
+          "caption": "Getting ready for what lies ahead"
+        },
+        {
+          "src": "assets/flamingo/UTK_0518.jpg",
+          "caption": "Great egret on driftwood"
+        },
+        {
+          "src": "assets/flamingo/UTK_0579.jpg",
+          "caption": "The lovers and a distant admirer?"
+        },
+        {
+          "src": "assets/flamingo/UTK_0646.jpg",
+          "caption": "Painted stork, one foot raised"
+        },
+        {
+          "src": "assets/flamingo/UTK_0739.jpg",
+          "caption": "Great egret and painted stork"
+        },
+        {
+          "src": "assets/flamingo/UTK_0693.jpg",
+          "caption": "Learning from the senior"
+        },
+        {
+          "src": "assets/flamingo/UTK_0601.jpg",
+          "caption": "Needlefish in the shallows"
+        },
+        {
+          "src": "assets/flamingo/UTK_0595.jpg",
+          "caption": "Tilapia under the surface"
+        },
+        {
+          "src": "assets/flamingo/UTK_0621.jpg",
+          "caption": "Cracked lakebed beneath the water"
+        },
+        {
+          "src": "assets/flamingo/UTK_0732.jpg",
+          "caption": "A fisherman's net"
+        },
+        {
+          "src": "assets/flamingo/UTK_0610.jpg",
+          "caption": "Beach morning glory at the water's edge"
+        },
+        {
+          "src": "assets/flamingo/UTK_0560.jpg",
+          "caption": "Plain tiger on a thorn"
+        }
+      ]
+    }
+  ]
 }
