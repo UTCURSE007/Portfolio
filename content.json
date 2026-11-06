@@ -309,7 +309,7 @@
     ]
   },
   "writings": {
-    "intro": "Poems, mostly written in transit — physics borrowed as a love language, and the occasional rock that refuses to explain itself.",
+    "intro": "Poems and essays, mostly written in transit — physics borrowed as a love language, summers at Nani's, and the occasional rock that refuses to explain itself.",
     "items": [
       {
         "kind": "poem",
@@ -319,7 +319,8 @@
         "coverCaption": "A Black Hole Date — acrylic",
         "note": "",
         "script": "latin",
-        "body": "This weekend, black hole date?\nMy right hand\nYour left hand\nCriscrossed like\nSpace and time\nThen you may lower\nYour head on my shoulder\nIn the slowed down time\nLets forget this rhyme\nIn the slowed down time\nWe'll caress\nWe'll float\nWe'll spin\nWe'll dance\nWe'll hug\nWe'll cry\nWe'll helmet-kiss\nAnd then we'll return\nTo our lovely Earth\nMaybe mankind will be gone\nLets hope no Jurassic world\nAnd no alien colony\nWe'll start from zero\nBaby I will be your Adam\nYou be my Eve\nWe'll make a new world\nWithout hatred\nWithout the system of caste\nColor, creed and race\nWithout the dirt in Ganga\nAnd carbon in the air\nWhen all will be sorted\nWe'll fly to yet another\nBlack hole date"
+        "body": "This weekend, black hole date?\nMy right hand\nYour left hand\nCriscrossed like\nSpace and time\nThen you may lower\nYour head on my shoulder\nIn the slowed down time\nLets forget this rhyme\nIn the slowed down time\nWe'll caress\nWe'll float\nWe'll spin\nWe'll dance\nWe'll hug\nWe'll cry\nWe'll helmet-kiss\nAnd then we'll return\nTo our lovely Earth\nMaybe mankind will be gone\nLets hope no Jurassic world\nAnd no alien colony\nWe'll start from zero\nBaby I will be your Adam\nYou be my Eve\nWe'll make a new world\nWithout hatred\nWithout the system of caste\nColor, creed and race\nWithout the dirt in Ganga\nAnd carbon in the air\nWhen all will be sorted\nWe'll fly to yet another\nBlack hole date",
+        "art": "blackhole"
       },
       {
         "kind": "poem",
@@ -329,7 +330,8 @@
         "coverCaption": "The rock in question.",
         "note": "",
         "script": "latin",
-        "body": "Dimples on the rock...\nDid it come from lightning strikes?\nOr maybe some degenerating meteor hit it...\nNow hitting the softer note...\nIt must be a prehistoric human's hut fixture\nOhh common, its easy...\nIts the remnant of porosities in lava\nOr is it? Maybe we can settle down now\nAnd accept that the whole rock fell from space\nAnd those pits are the regmaglypts!\nBut that seems too crazy\nAnd hazy (why am I rhyming unnecessarily?)\nBack to the question\nCant it just be due to the aftermath..\nOf some fierce alien-human bullet fight?\nWait, we are going too far here...\nI really think its the thousands of years of..\ncooling and heating led to some incredible...\nrock solid mechanics phenomena\nOr just denudation due to high winds\nI am no geoscience expert\nThough my final conclusion shall be shared\nI feel why do we care?\nAre we after the truth here?\nDoes the rock care its having dimples?\nOr the dimples care its on the rock?\nLike this rock, shall I leave you to a cliffhanger?\nOhh yes, great idea, its a banger! (shit I rhymed again)"
+        "body": "Dimples on the rock...\nDid it come from lightning strikes?\nOr maybe some degenerating meteor hit it...\nNow hitting the softer note...\nIt must be a prehistoric human's hut fixture\nOhh common, its easy...\nIts the remnant of porosities in lava\nOr is it? Maybe we can settle down now\nAnd accept that the whole rock fell from space\nAnd those pits are the regmaglypts!\nBut that seems too crazy\nAnd hazy (why am I rhyming unnecessarily?)\nBack to the question\nCant it just be due to the aftermath..\nOf some fierce alien-human bullet fight?\nWait, we are going too far here...\nI really think its the thousands of years of..\ncooling and heating led to some incredible...\nrock solid mechanics phenomena\nOr just denudation due to high winds\nI am no geoscience expert\nThough my final conclusion shall be shared\nI feel why do we care?\nAre we after the truth here?\nDoes the rock care its having dimples?\nOr the dimples care its on the rock?\nLike this rock, shall I leave you to a cliffhanger?\nOhh yes, great idea, its a banger! (shit I rhymed again)",
+        "art": "rock"
       },
       {
         "kind": "poem",
@@ -339,7 +341,8 @@
         "coverCaption": "Vortex around 'her' — acrylic",
         "note": "",
         "script": "latin",
-        "body": "She spun at her axis\nLike a crazy table top\nAnd made a warp in spacetime\nFor me to fall into\nGradually her spin changed\nShe settled\nHer axis tilted\nAlignment reset\nCoordinates shifted\nBut the warp she'd created\nstood still,\nHeartless and pale.\nI checked twice,\nShe wasnt there...\nThe warp remained\nLike a plastic perturbation\nTheoretically its a 'no escape'\nSo I kept falling in\nEver and forever"
+        "body": "She spun at her axis\nLike a crazy table top\nAnd made a warp in spacetime\nFor me to fall into\nGradually her spin changed\nShe settled\nHer axis tilted\nAlignment reset\nCoordinates shifted\nBut the warp she'd created\nstood still,\nHeartless and pale.\nI checked twice,\nShe wasnt there...\nThe warp remained\nLike a plastic perturbation\nTheoretically its a 'no escape'\nSo I kept falling in\nEver and forever",
+        "art": "top"
       },
       {
         "kind": "poem",
@@ -349,7 +352,84 @@
         "coverCaption": "",
         "note": "In Hindi",
         "script": "devanagari",
-        "body": "रेल के ऊपर दौड़ते डिब्बे,\nएक डिब्बे के अंदर मैं,\nमेरे दाएं खिड़की से…\nदिखते खूबसूरत नजारे\nलेकिन उससे कहीं सुरम्य\nमेरे बाएं बैठी तुम\nतुम्हारी मुस्कान से ही\nयह रेल दौड़ रही\nतुम चुप हो जाओ\nतो डिब्बे बेपटरी हो जाएं\nरेल तो क्या ब्रह्मांड रुक जाए\nतुम पलके झपकती हो\nतो हवा बह उठती है\nतुम्हारे बाल फेरने से\nपृथ्वी नाच उठती है\nतुम्हारी जो यह बिंदी है\nसारा संसार इसकी ही\nपरिक्रमा कर रहा है\nतुम गर यह बिंदी उतार दो\nब्रह्म का सर्वनाश हो उठे\nऔर जो तुम्हारी कान की बाली है\nकहते हैं उसके अंदर से\nनिकलता है एक वर्महोल\nजो जुड़ता है तुम्हारी\nसुनहरी नाक की बाली से\nजाने कितनी ही उम्मीदें\nलुप्त हो चुकी उनमें\nतुम यूं ही मुस्कुराते रहो\nसंसार चलता रहेगा।"
+        "body": "रेल के ऊपर दौड़ते डिब्बे,\nएक डिब्बे के अंदर मैं,\nमेरे दाएं खिड़की से…\nदिखते खूबसूरत नजारे\nलेकिन उससे कहीं सुरम्य\nमेरे बाएं बैठी तुम\nतुम्हारी मुस्कान से ही\nयह रेल दौड़ रही\nतुम चुप हो जाओ\nतो डिब्बे बेपटरी हो जाएं\nरेल तो क्या ब्रह्मांड रुक जाए\nतुम पलके झपकती हो\nतो हवा बह उठती है\nतुम्हारे बाल फेरने से\nपृथ्वी नाच उठती है\nतुम्हारी जो यह बिंदी है\nसारा संसार इसकी ही\nपरिक्रमा कर रहा है\nतुम गर यह बिंदी उतार दो\nब्रह्म का सर्वनाश हो उठे\nऔर जो तुम्हारी कान की बाली है\nकहते हैं उसके अंदर से\nनिकलता है एक वर्महोल\nजो जुड़ता है तुम्हारी\nसुनहरी नाक की बाली से\nजाने कितनी ही उम्मीदें\nलुप्त हो चुकी उनमें\nतुम यूं ही मुस्कुराते रहो\nसंसार चलता रहेगा।",
+        "art": "rail",
+        "published": "Published in ISRO House Journal ‘Nodan Mukur’"
+      },
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "हे भारती के नौजवानो",
+        "cover": "",
+        "coverCaption": "",
+        "note": "",
+        "script": "devanagari",
+        "art": "shankh",
+        "body": "हे भारती के नौजवानो\nउठ के शंखनाद करो\nतुम पत्थर नहीं पहाड़ हो\nचट्टानों पे एक प्रहार दो\n\nहे भारती के लाल सुनो\nउष्म में खुल के बरस चलो\nतुम शीत में तेज ऊर्जा बनो\nबरसात में तुम छांव दो\n\nहे भारती के दीवानो\nउन वीर को तुम याद करो\nजिनका रक्त गया इस मिट्टी को\nइस मिट्टी से अभिषेक करो\n\nहे भारती के सपूतो\nयुद्ध भूमि में हुंकार भरो\nउठ जाग अब उड़ चलो\nसोने की चिड़िया वाली उड़ान लो",
+        "published": "Published in ISRO House Journal ‘Nodan Mukur’"
+      },
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "ख्वाबों का शहर",
+        "cover": "",
+        "coverCaption": "",
+        "note": "",
+        "script": "devanagari",
+        "art": "city",
+        "body": "ख्वाबों का शहर कहाँ मिलेगा?\nबहुत खोजा, नहीं दिखा?\nअरे ऐसे कैसे नहीं मिलेगा!\nतुम रेसिपी सूनो और बनाओ\nएक किलो जोधपूर का किला\nदो गैलन काशी की गंगा\nतीन चम्मच हिम की चम्बा\nचार गिलास दिल्ली की गलीयां\nफिर साबूत डाल देना\nपांच पर्वत राजगीर से\nछह कमल झील कोट्टयम से\nसात अधभूत बीच कोंकण से\nआठ झरने पचमढी से छौंक के\nनौ मिनट बेंगलुरु की लालिमा में\nदस कन्याकुमारी के मसाले लगाना\nअच्छे से पकाना और फिर\nस्वादानुसार कलकत्ते की चाशनी\nऔर ज़रा सी मेघालय की बदरी\nडाल कर, मिथिला के सत्कार से\nपड़ोस लाना बोकारो के धातु पर।",
+        "published": "Published in ISRO House Journal ‘Propulsion Today’"
+      },
+      {
+        "kind": "poem",
+        "date": "",
+        "title": "रक्त की कविता",
+        "cover": "",
+        "coverCaption": "",
+        "note": "",
+        "script": "devanagari",
+        "art": "quill",
+        "body": "हर साल होती ही है,\nदेखो फिर हो गई!\nचहल-पहल-गांव में...\nजो हुआ उसे देख,\nमेरे हाथ कांप रहे,\nऔर कलम फ़िसल रहा,\nआज मेरा रक्त उबल रहा,\nये कलम ले जाओ फिर...\nवो बह चुका लहू लाओ और,\nसोने की चिड़िया का पंख तोर लाओ...\nमैं आज रक्त से लिखूंगा!\nवो खून जो सिर्फ इसलिए बहा...\nक्योंकि वो किसी एक धर्म से था।\nतुम कहते हो पागल है कवि...\nकलम है फिर रक्त क्यूं?\nअरे सारे स्याही धूमिल हो जायेंगे,\nजब दास्तां-ए-हैवानियत लिखूंगा...\nबहता रक्त नहीं ख़तम होगा।\nवो तो सदाबहार है,\nहर दूसरी शाम बहता है,\nआज मेरे मोहल्ले...\nकल तुम्हारे मोहल्ले!\nभारत की सबसे बड़ी नदी...\nइस लहू की है।\nकश्मीर से कन्याकुमारी,\nगुजरात से बंगाल,\nबहती ही रहती है...\nआज बह रही है,\nसदियों पहले भी बहती थी।\nबह ही रही है,\nख़तम ही नहीं होती।\nमैं पागल कवि हूं,\nएक लंबी दास्तां लिखूंगा,\nऔर नदी सुखा दूंगा...\nतुम फिर ये नदी भरने मत देना।"
+      },
+      {
+        "kind": "article",
+        "date": "",
+        "title": "पिता के हाथ का खाना और एकादशी वाला चाँद",
+        "cover": "",
+        "coverCaption": "",
+        "note": "",
+        "script": "devanagari",
+        "art": "roti",
+        "byline": "",
+        "body": "खाना मतलब माँ के हाथ का खाना। यह तो बिल्कुल जगजाहिर है कि माँ के हाथ में जादू है। रोटी के साथ भुजिया भी किसी पाँच सितारा के खाने से बेहतर लगे अगर माँ ने बनाया हो। जाने कितनी ही कहानियों, कविताओं और पटकथाओं में इसका ज़िक्र हुआ हो। सफ़ोला तेल के प्रचार में कहते हैं – “शाम बने यम्मी, कूल बने मम्मी।” माँ का जिक्र हो भी क्यों न भला? माँ ही तो खाना बनाती है।\n\nपर क्या सचमुच केवल माँ ही स्वाद का पर्याय हैं?\n\nमुझे औरों का नहीं पता, मेरे पापा तो अच्छा पका लेते हैं। इसके अलावा कुछ लिख भी नहीं सकते, आखिर वो पापा जो हैं। मज़ाक से हटकर, मेरे पापा वास्तव में एक अच्छे पाक कलाकार हैं। यह हुनर उन्होंने पटना में रहते हुए अपने विद्यार्थी जीवन में सीखा। कुछ व्यंजन उन्होंने माँ से भी स्वादिष्ट बनाकर खिलाए हैं। मुझे नहीं पता कि पिताओं की पाक कला को समाज ने क्यों नहीं सराहा। घरेलू पाक कला को महिलाओं के खेमे में रखा गया, वहीं दुनिया के बड़े-बड़े शेफ़् आपको अधिकतर पुरुष ही दिखेंगे। सड़क किनारे “माँ का ढाबा” का रसोइया भी पुरुष ही है। जहाँ दौलत और शोहरत की बात आई, पुरुष ने महिलाओं को पीछे छोड़ दिया। खैर, समाज को छोड़िए, घर की रसोई में पिताओं के योगदान पर थोड़ा प्रकाश इस लेख में डाल ही दिया जाए।\n\nमाएँ अक़्सर यह पूछती हैं कि आज क्या खाओगे? बच्चे अपनी फ़रमाइश पेश करते हैं और अगले वक्त खाना हाज़िर। वहीं दूसरी ओर पिता के अंदर यह प्रक्रिया इतनी सीधी नहीं होती। जब माँ बीमार पड़ती या मायके जाती, तब रसोई का काम पिता के हाथों में आ जाता और फिर बनती है रसोई एक जुरासिक पार्क। आपको उनका असिस्टेंट बनना पड़ता है। नमक का डिब्बा कहाँ है? हल्दी कहाँ है? खोजो, ढूँढो! नहीं मिला? माँ को कॉल लगाओ और पूछो। माँ की तीन रोटी के बराबर पापा की एक बनती। माँ की रोटी पूर्णिमा का चाँद दिखती तो पापा का एकादशी वाला चाँद – थोड़ा गोल, थोड़ा तिरछा और पूरा स्वादिष्ट। रसोई के बर्तन और सामग्री का बुरा हाल देखकर माँ वापस आने पर काफी नाराज़ होती। रसोई मानो ऐसी लगती जैसे तीसरा विश्व युद्ध यहीं शुरू होकर समाप्त हुआ हो। अंडों की क्रेट में टमाटर मिल जाता और कराही में दूध ढका दिखता।\n\nएक और चीज़ मैंने गौर की है। जो खाना आप माँ के बनाने पर नोकझोंक करके न खाने का फ़रमान करते हैं, वही जब पिता बनाते हैं, फिर खूब चाव से, “आह-वाह” करते हुए खा लिया जाता है। माँ के खाने में स्नेह और प्रेम दिखता है, तो पिता के खाने में एक बड़ी कोशिश दिखती है। जो इंसान अक़्सर घर के बाहर का काम सँभालता है, वह पितृसत्ता पर लात रखते हुए रसोई में घुसता है और चूल्हा जलाता है।\n\n2020 की बात है, जब मुझे और माँ—दोनों को ही कोरोना के कारण क्वारंटीन रहना पड़ा। पापा सुबह की चाय से रात के दूध तक, कुल दसियों बार अलग-अलग पहर का भोजन तैयार करते। उस वक्त पापा ने रसोई ही नहीं, पूरा घर वन मैन आर्मी जैसी ताकत और जिम्मेदारी के साथ संभाला। तब समझ आया कि पाक कला कोई शौक़ नहीं, बल्कि ज़रूरत है। यह कहना अतिशयोक्ति नहीं होगा कि यह बिलकुल बेयर मिनिमम कला है, जो सबको आनी ही चाहिए।\n\nतो साथियों, देर नहीं हुई है – जाइए, खोजिए और ढूँढ लाइए आटा-पानी, और बना डालिए एकादशी वाला चाँद। रोटी में काले गड्ढे मिले तो उदास मत होना, क्योंकि वो तो चाँद पर भी हैं!",
+        "published": "Published in ISRO House Journal ‘Propulsion Today’"
+      },
+      {
+        "kind": "article",
+        "date": "",
+        "title": "संगीत और विज्ञान",
+        "cover": "",
+        "coverCaption": "",
+        "note": "",
+        "script": "devanagari",
+        "art": "record",
+        "byline": "उत्कर्ष, वैज्ञानिक/अभियंता, इसरो",
+        "epigraph": "जात कहाँ हो गोरी,\nजाने न पैय्यो...\nकेसर रंग के माठ भये होये,\nहोरी खेलत कान्हा रे",
+        "body": "उपरोक्त पंक्तियाँ सुरश्री केसरबाई केरकर की ठुमरी है जो राग भैरवी ताल दीपचंदी पर आधारित है। केसरबाई पिछली सदी की एक बेमिसाल 'खयाल' गीतकार थी। उन्होंने इस गाने में महिला से पूछा है कि बिना राह का पता किये वह कहाँ चल पड़ी है, जिस पर कृष्ण मोह मे लीन वह महिला जवाब देती है कि वो कान्हा के साथ होली खेलने जा रही है। इसे दूसरे संदर्भ में माँ और नव-वैवाहिक बेटी के बीच विदाई के समय के वार्तालाप को भी समझा जा सकता है।\n\nदरअसल 1977 में अमेरिकी अन्तरिक्ष एजेंसी नासा द्वारा भेजे जाने वाले शोधयान वॉएजर में वैज्ञनिकों ने एक सीडीनुमा 'गोल्डन रिकॉर्ड' रखा जिसमें जानवरों के आवाज से लेकर बच्चों के हँसने की आवाज डाली गयी। इस रिकॉर्ड में कुछ गीत भी डाले गए। केसरबाई केरकर के 'जात कहाँ हो' को खुद प्रसिध्द वैज्ञानिक कार्ल सागन की कमिटी ने चुना। इस रिकॉर्ड का यान में डाले जाने का उदेश्य बहुत गहरा है! माना गया कि यह यान पृथ्वी और सूर्य के उम्र खत्म होने के बाद भी अन्तरिक्ष की सैर करता रहेगा। और क्या पता किसी दिन कोई दूसरी दुनिया के लोग हमारे यान को खोज ले। उस वक्त यह यान उन्हे यह रिकॉर्ड एक तोहफा के रूप में देगा जो उन्हें पृथ्वी के संगीत को सुनाएगा। द्रष्टवय है कि मौजूदा समय में यह यान हमारे सौर मण्डल को छोड़ चुकी है और आने वाले लाखों साल तक अन्तरिक्ष का सफर करती रहेगी अकेली, ठीक वैसे ही जैसे केसरबाई के गीत की महिला कान्हा के खोज में चलती जाती है।\n\nसदियों से संगीत और विज्ञान का सम्बन्ध बेहद गहरा है। अनंत है, शाश्वत है। सत्येंद्र नाथ बोस एक भारतीय गणितज्ञ और भौतिकशास्त्री थे। उन्हें बोस-आइन्स्टीन आंकड़े और बोस–आइन्स्टीन सिद्धांत की नींव रखने के लिए पूरा विज्ञान जगत आज भी याद करता है। बोस यसराज (सितार जैसा एक यंत्र) के माहीर और विलक्षण कलाकार थे। उनपर अनुसंधान करने वाले लोग उनके शोध और खोज के लिए उनके संगीत में रुचि को रेखांकित किया है। सिर्फ बोस ही नहीं, दूसरे भौतिकशास्त्री जैसे आइन्स्टीन, हैजेनबर्ग, फेयनमेन और मैक्स प्लेकं भी संगीत की कला में निष्णात थे। अक्सर विज्ञान जगत में संगीत को ब्रम्हांड से जुड़ने का माध्यम समझा गया है। हकीकत में सही भी है। जिन चीजों को देखा नहीं जा सकता उन्हें संगीत से महसूस किया जा सकता है।\n\nबीते कुछ शताब्दियों में गणितज्ञों और वैज्ञानिकों ने संगीत और उसके ध्वनि के पीछे छुपे कई रहस्यों को भी खोज लिया है। प्राचीन काल के सभ्यताओ में संगीत यंत्र पाए गए हैं। यह कहना तो मुश्किल है कि कब विज्ञान और संगीत एक दूसरे के हमसफर बन गए पर आज के युग में वे कई हद तक घुल- मिल चुके हैं। आज इंसान इलेक्ट्रिकल पल्स से धातु में कंपन पैदा कर के संगीत बजा सकता है। संगीतकार के गीत को डिजिटल डाटा में स्टोर कर के उसे करोड़ों लोगों तक पहुँचा सकता है। इतना ही नहीं आज तकनीक ने ध्वनि के वेग से भी तेज चलना सीख लिया है। लेकिन कहीं न कहीं हम इयरफोन और लाउडस्पीकर के पीछे संगीत के खूबसूरत मर्म को भूलते जा रहे हैं। वो चिड़ियों का चहकना, हवा की चंचल गुनगुनाहट, हर पल स्वांस का नाक से सरसराना और उनका यह याद दिलाना कि यह दुनिया कितनी खूबसूरत है - आज हम जैसे हैं, जहा हैं, बहुत अच्छे हैं!\n\nसंगीत और विज्ञान एक दूसरे के लिए पूरक होकर मानवता के उत्थान के लिए अनवरत प्रयासरत हैं।",
+        "published": "Published in ISRO House Journal ‘Nodan Mukur’"
+      },
+      {
+        "kind": "article",
+        "date": "",
+        "title": "नानी घर और सितारों से भरा आसमान",
+        "cover": "assets/writing-nani-ghar.png",
+        "coverCaption": "",
+        "note": "",
+        "script": "devanagari",
+        "art": "stars",
+        "byline": "उत्कर्ष, वैज्ञानिक, इसरो",
+        "body": "पृथ्वी ग्रह पर हमारा संसार एक बेहद खूबसूरत मौसमों के कालचक्र से होकर गुजरता है। यह चक्र हर साल मानसून के बाद जाड़ा, फाल्गुन और आखिर में ग्रीष्म पर आ ठहरता है। ग्रीष्म यानी गर्मी, और उससे याद आया बचपन के दिनों में स्कूलों में मिलने वाली लम्बी गर्मी की छुट्टियां! यह अवकाश भी गुरुजन हम बच्चों को काफ़ी शर्त पर देते थे। गणित महाशय पूरे 50 दिन रोज 1 से 20 का पहाड़े लिखने का फरमान दिये ही थे कि अगली ही घंटी अंग्रेज़ी के शिक्षक ने 10 निबंध लिखने का गृहकार्य सौंप दिया। हिन्दी की मैम ही हम बच्चों की एक आखिरी उम्मीद थीं, जिन्होंने पिछले दो साल से अवकाश में काम नहीं दिये थे। इस साल उनकी भी मती मारी गई जो जाते -जाते 5 कविता याद कर के आने को कह ही दिया। हम सारे बच्चे भी कम तेज नहीं हुआ करते थे। झट से 5 रुपये वाली कॉपियां ला के 2-3 दिन के अंदर 50 पन्ने पहारा और 10 निबंध निपटा के बैठ जाते थे। अब पूरा ग्रीष्मावकाश बिना किसी टेंशन के बिताया जाएगा, यह सोच आह्लादित होते थे । अरे हाँ, हिन्दी वाली मैडम के गृहकार्य का क्या? हम बच्चे जानते थे अगर अभी याद कर भी लिया तो छुट्टी के अंत होते- होते कुछ याद न रहने वाला। इसलिए इस काम को अंत के लिए छोड़ा जाता। अगर अंत में भी याद न किया तो क्या होता, हम बालक भी खूब जानते थे की हिन्दी वाली मैडम नहीं बिगड़ेगी ।\n\nअवकाश के शुरू के दिन शहरी दोस्तों के साथ देर-साँझ तक खेलने में बीत जाता और फिर एक-एक कर सारे बच्चे अपने-अपने माता-पिता के साथ छुट्टियां मनाने गाँव चले जाते। मेरे लिए हमेशा दादी घर से ज्यादा करीब नानी घर रहा। नानी के घर जाते ही मानो सारे अदृश्य पंख खुल जाते। ये पंख अब माँ तो क्या पापा से भी नहीं डरते। नानाजी और नानीजी के लार-प्यार में पूरे दिन उछलते रहते। रसीले आम और लीची खा कर गाँव के मौसी, मामा और उनके बच्चे के साथ हर पल एक अपना अलग ही सुखद अहसास लाता। उस समय स्मार्टफोन नहीं हुआ करते थे। साँझ को गेहूं के खेत के सामने सारे बच्चे चौकी पर लेट के आसमान निहारा करते। पहले बादलों के आकृति में अपने मनगढ़ंत किरदार ढूंढ लेते, किसी को शक्तिमान मिल जाता तो किसी को सोनपरी की जादुई छड़ी। अंधेरा होते ही पूरे आसमान पर मानो नीले कालीन पर अनगिनत हीरे चमकने लगते। हम घर के बड़ों के साथ खोये हुए परिजनों की तलाश करने में जुट जाते। कभी किसी को सप्तऋषि दिखता तो सारे उसके उंगली के सीध में तारे मिलाने में जुट जाते। वो दिन भी क्या हसीन थे।\n\nहाल ही की बात है मैं एक शाम अपने नानी गाँव से गुजर रहा था। दरअसल नानी घर का नानी घर होना बस नानी के रहने तक ही सीमित हो जाता है। नानी को गुजरे कई साल हो गए थे। वो मौसी, मामा और उनके बच्चे भी अब बस व्हाट्सएप कॉनटेक्ट और फेसबुक फ्रैंड होने तक ही सीमित हो चुके थे। खैर तब मुझे एक लम्बा सफर तय कर के पटना निकलना था तो सोचा चलो कुछ देर यही विश्राम कर के चाय पी लिया जाए। सड़क किनारे टपरी के बेंच पर बैठ के मैंने अपने झोले से पानी की बोतल निकाल दो घुट लगाई और गहरे चिंतन में खो गया। नानी का गाँव अब गाँव नहीं रहा था, शहर भी नहीं था, कुछ और ही विचित्र हाल में दिखा। आसपास के प्लांट से लौट रहे कर्मी भी टपरी पे अब जुट रहे थे। आसपास कई सारे प्लांट खुलने से रोजगार के अवसर तो बेहतर हुए थे इसमे कोई शंका नहीं थी। दूकान से लग के कुछ झोपड़ियां थी, कुछ नौनिहाल चौकी पर लेटे थे। सिर जरूर आसमान के तरफ था लेकिन निगाहें हाथ मे थामी स्मार्टफोन की स्क्रीन पर थी। तभी मेरी चाय भी आ गयी। साँझ अब निशा रूप धारण कर रहा था। मुझे चाय में चीनी थोड़ी अधिक लगी और अचानक से याद आया कैसे नानी को ज्यादा चीनी वाली चाय ही पीना होता था। उन्हें कितना भी नुकसान समझा दो लेकिन बच्चे की तरह अड़ जाती और चीनी से समझौता नहीं करने देती। मेरी आंखे थोड़ी नम हुईं। मैंने गर्दन ऊपर कर आसमान में नानी को ढूंढना चाहा। प्लांटो से निकलने वाला धुआँ के कारण वो नीला कालीन अब मैला मालूम पर रहा था। काफी मशक्कत के बाद एक तारा दिखा जिसे 18 साल पहले ही मीनू मौसी के बेटे ने अपने खोए हुए खिलौने के नाम बुक कर रखा था।",
+        "published": "Published in ISRO House Journal ‘Nodan Mukur’"
       }
     ]
   },
