@@ -134,6 +134,24 @@
   body { top: 0 !important; }
   font[style] { background: none !important; box-shadow: none !important; }
   #google_translate_element { display: none; }
+  .lw { opacity: .16; transition: opacity .35s ease; }
+  .lw.on { opacity: 1; }
+  .story { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 64px; }
+  .story-vis { position: sticky; top: 88px; height: calc(100vh - 120px); max-height: 640px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+  .story-step { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; opacity: .28; transition: opacity .5s ease; }
+  .story-step.on { opacity: 1; }
+  [data-ann] { opacity: 0; transition: opacity .5s ease; }
+  [data-ann].on { opacity: 1; }
+  .traj-item { opacity: .35; transition: opacity .5s ease; }
+  .traj-item.on { opacity: 1; }
+  .traj-item.on .traj-dot { background: var(--color-accent); }
+  @media (max-width: 760px) {
+    .story { grid-template-columns: minmax(0,1fr); gap: 0; }
+    .story-vis { top: 52px; height: auto; max-height: none; z-index: 3; background: var(--color-bg); padding: 10px 0 8px; border-bottom: 1px solid var(--color-divider); gap: 6px; }
+    .story-vis svg { max-height: 30vh; }
+    .story-step { min-height: 62vh; }
+  }
+  @media (prefers-reduced-motion: reduce) { .lw, .story-step, .traj-item, [data-ann] { opacity: 1 !important; transition: none; } }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } [data-slide].on { animation: none; } #orbits { display: none; } }
 </style>
 </head>
@@ -267,7 +285,7 @@ function render() {
   m.querySelectorAll("[data-dot]").forEach((n) => n.addEventListener("click", () => {
     if (tab === "photographs") slide = +n.dataset.dot; else if (tab === "album") aslide = +n.dataset.dot; else pslide = +n.dataset.dot; tick();
   }));
-  tick(); m0.classList.remove("fade"); reveal(); countUp();
+  tick(); m0.classList.remove("fade"); reveal(); countUp(); storyScroll();
   }, wait);
 }
 
@@ -283,24 +301,55 @@ function tick() {
 }
 
 function aboutHTML() {
-  const a = C.about;
+  const a = C.about, story = a.story || [];
+  const lit = (t) => e(t).split(" ").map((w) => '<span class="lw">' + w + "</span>").join(" ");
+  const exp = C.experience.slice().reverse();
+  const ann = (n, svg) => '<g data-ann="' + n + '">' + svg + "</g>";
+  const vis = '<svg viewBox="0 0 600 340" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:auto;overflow:visible" aria-hidden="true">' +
+    '<path d="M40 300 H570 M40 300 V30" stroke="var(--color-divider)" stroke-width="1"/>' +
+    '<g stroke="var(--color-divider)" stroke-width="1" stroke-dasharray="2 6"><path d="M40 126 H570"/><path d="M40 213 H570"/></g>' +
+    '<text x="44" y="22" font-size="12" fill="var(--color-text-muted, currentColor)" style="font-family:var(--font-body);letter-spacing:.12em">CHAMBER PRESSURE</text>' +
+    '<text x="570" y="322" text-anchor="end" font-size="12" fill="var(--color-text-muted, currentColor)" style="font-family:var(--font-body);letter-spacing:.12em">TIME</text>' +
+    ann(0, '<g stroke="var(--color-accent)" stroke-width="1.4"><path d="M120 90 q8 -8 16 0 q8 -8 16 0"/><path d="M178 66 q6 -6 12 0 q6 -6 12 0"/><path d="M226 92 q5 -5 10 0 q5 -5 10 0"/></g><path d="M80 120 C160 40 300 30 420 70" stroke="var(--color-accent)" stroke-width="1" stroke-dasharray="3 6"/><text x="430" y="76" font-size="15" font-style="italic" fill="var(--color-accent-700)" style="font-family:var(--font-heading)">why?</text>') +
+    ann(1, '<rect x="215" y="100" width="255" height="52" fill="var(--color-accent)" opacity=".1"/><path d="M215 100 V152 M470 100 V152" stroke="var(--color-accent)" stroke-width="1"/><text x="342" y="92" text-anchor="middle" font-size="15" font-style="italic" fill="var(--color-accent-700)" style="font-family:var(--font-heading)">power balance</text>') +
+    ann(2, '<rect x="136" y="60" width="80" height="240" fill="var(--color-accent)" opacity=".1"/><rect x="470" y="60" width="55" height="240" fill="var(--color-accent)" opacity=".1"/><text x="176" y="52" text-anchor="middle" font-size="15" font-style="italic" fill="var(--color-accent-700)" style="font-family:var(--font-heading)">start</text><text x="498" y="52" text-anchor="middle" font-size="15" font-style="italic" fill="var(--color-accent-700)" style="font-family:var(--font-heading)">shutdown</text>') +
+    ann(3, '<g transform="translate(400 180)" stroke="var(--color-text)" stroke-width="1.2"><rect x="0" y="0" width="140" height="34" fill="var(--color-bg)"/><rect x="0" y="40" width="140" height="34" fill="var(--color-bg)"/><path d="M0 37 H140" stroke="var(--color-accent)" stroke-width="5"/><path d="M14 8 l12 18 M40 8 l12 18 M66 8 l12 18 M92 8 l12 18" opacity=".35"/><path d="M14 48 l12 18 M40 48 l12 18 M66 48 l12 18 M92 48 l12 18 M118 48 l12 18" opacity=".35"/></g><text x="470" y="272" text-anchor="middle" font-size="15" font-style="italic" fill="var(--color-accent-700)" style="font-family:var(--font-heading)">brazed seam</text>') +
+    ann(4, '<circle cx="352" cy="118" r="28" stroke="var(--color-accent)" stroke-width="1.4"/><path d="M372 98 L410 62" stroke="var(--color-accent)" stroke-width="1"/><text x="414" y="58" font-size="15" font-style="italic" fill="var(--color-accent-700)" style="font-family:var(--font-heading)">anomaly → design fix</text>') +
+    '<path d="M40 300 L140 300 C152 300 160 299 166 296 L175 120 C178 95 185 92 192 108 C198 122 205 128 215 126 L330 126 C340 126 344 104 350 104 C356 104 358 148 364 140 C368 134 372 126 380 126 L470 126 C480 126 488 200 500 290 C506 300 520 300 560 300" stroke="var(--color-text)" stroke-width="1" opacity=".14"/>' +
+    '<path id="trace" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M40 300 L140 300 C152 300 160 299 166 296 L175 120 C178 95 185 92 192 108 C198 122 205 128 215 126 L330 126 C340 126 344 104 350 104 C356 104 358 148 364 140 C368 134 372 126 380 126 L470 126 C480 126 488 200 500 290 C506 300 520 300 560 300" stroke="var(--color-accent)" stroke-width="2.2"/>' +
+    '<circle id="tracehead" r="5" fill="var(--color-accent)" cx="40" cy="300"/></svg>';
   return "<section>" +
-    '<h2 class="h2">' + e(a.heading) + "</h2>" +
-    '<div class="prose" style="margin-bottom:var(--space-8)">' + a.paragraphs.map((p) => "<p>" + nl2br(p) + "</p>").join("") + "</div>" +
-    '<h2 class="h2">Major domains</h2>' +
-    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:var(--space-4);margin-bottom:var(--space-8)">' +
-      C.domains.map((d, i) => '<div class="card"><span class="card-kicker">' + String(i + 1).padStart(2, "0") + '</span><h4 class="card-title">' + e(d.title) + '</h4><p class="card-body">' + e(d.body) + "</p></div>").join("") +
-    "</div>" +
+    '<p class="kicker" style="margin:0 0 var(--space-4)">' + e(a.heading) + "</p>" +
+    '<p data-lit style="margin:0 0 var(--space-6);font-family:var(--font-heading);font-weight:400;font-size:clamp(34px,5.4vw,64px);line-height:1.12;letter-spacing:-.01em;max-width:16em;text-wrap:pretty">' + lit(a.lede || "") + "</p>" +
+    '<p style="margin:0 0 var(--space-3);font-size:17px;line-height:1.75;max-width:36em;text-wrap:pretty">' + e(a.paragraphs[1] || "") + "</p>" +
+    '<p class="text-muted" style="margin:0 0 var(--space-8);font-size:13px;letter-spacing:.06em">' + e(a.paragraphs[3] || "") + "</p>" +
+    "</section>" +
+    (story.length ? '<section style="margin:0 0 var(--space-8)"><div class="story" id="story">' +
+      '<div class="story-vis">' + vis +
+        '<div style="display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--color-divider);padding-top:12px">' +
+          '<span id="storyNum" style="font-family:var(--font-heading);font-size:44px;line-height:1;color:var(--color-accent);font-feature-settings:\'tnum\'">01</span>' +
+          '<span id="storyPhase" class="kicker" style="margin:0">' + e(story[0].phase) + "</span></div></div>" +
+      '<div>' + story.map((s, i) => '<article class="story-step" data-step="' + i + '" data-phase="' + e(s.phase) + '">' +
+        '<p class="kicker" style="margin:0 0 var(--space-3)">' + String(i + 1).padStart(2, "0") + " · " + e(s.phase) + "</p>" +
+        '<h3 style="margin:0 0 var(--space-3);font-family:var(--font-heading);font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1.15">' + e(s.title) + "</h3>" +
+        '<p style="margin:0;font-size:16px;line-height:1.8;max-width:30em;text-wrap:pretty">' + e(s.body) + "</p></article>").join("") +
+      "</div></div></section>" : "") +
+    "<section>" +
     (C.field.length ? '<h2 class="h2">In the field</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4);margin-bottom:var(--space-8)">' +
-      C.field.map((f) => '<figure style="margin:0"><img class="plate figimg" src="' + e(f.src) + '" alt="' + e(f.caption) + '" loading="lazy" style="aspect-ratio:3/4;object-fit:cover"><figcaption>' + e(f.caption) + "</figcaption></figure>").join("") + "</div>" : "") +
-    '<h2 class="h2">Experience</h2>' +
-    C.experience.map((x, i) => '<article class="row"' + (i === C.experience.length - 1 ? ' style="border-bottom:1px solid var(--color-divider);margin-bottom:var(--space-8)"' : "") + ">" +
-      '<p class="text-muted date">' + nl2br(x.date) + "</p>" +
-      '<div class="body"><h3 style="font-size:22px;margin:0 0 4px">' + e(x.title) + "</h3>" +
-      '<p class="text-muted" style="font-size:13px;margin:0 0 var(--space-3)">' + e(x.org) + "</p>" +
-      (x.body ? '<p style="font-size:14px;line-height:1.7;margin:0;max-width:52em">' + e(x.body) + "</p>" : "") +
-      ((x.bullets || []).length ? '<ul style="margin:0;padding-left:1.1em;font-size:14px;line-height:1.75;display:grid;gap:2px">' + x.bullets.map((b) => "<li>" + e(b) + "</li>").join("") + "</ul>" : "") +
-      "</div></article>").join("") +
+      C.field.map((f, i) => '<figure data-par="' + [0.05, -0.04, 0.07, -0.03][i % 4] + '" style="margin:0;will-change:transform"><img class="plate figimg" src="' + e(f.src) + '" alt="' + e(f.caption) + '" loading="lazy" style="aspect-ratio:3/4;object-fit:cover"><figcaption>' + e(f.caption) + "</figcaption></figure>").join("") + "</div>" : "") +
+    '<h2 class="h2" style="margin-bottom:var(--space-2)">Trajectory</h2>' +
+    '<p class="text-muted" style="font-size:14px;margin:0 0 var(--space-6)">From a formula-student chassis to rocket engines.</p>' +
+    '<div id="traj" style="position:relative;padding-left:40px;margin-bottom:var(--space-8)">' +
+      '<div style="position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:var(--color-divider)"></div>' +
+      '<div id="trajFill" style="position:absolute;left:6px;top:6px;width:3px;height:0;background:var(--color-accent);border-radius:2px"></div>' +
+      exp.map((x, i) => '<article class="traj-item" style="position:relative;padding:0 0 var(--space-6)">' +
+        '<span class="traj-dot" style="position:absolute;left:-39px;top:6px;width:13px;height:13px;border-radius:50%;border:1.5px solid var(--color-accent);background:var(--color-bg);box-sizing:border-box;transition:background .4s"></span>' +
+        '<p class="kicker" style="margin:0 0 6px;font-feature-settings:\'tnum\'">' + e(x.date) + (i === exp.length - 1 ? " · Now" : "") + "</p>" +
+        '<h3 style="font-size:24px;margin:0 0 4px;font-weight:400">' + e(x.title) + "</h3>" +
+        '<p class="text-muted" style="font-size:13px;margin:0 0 var(--space-3)">' + e(x.org) + "</p>" +
+        (x.body ? '<p style="font-size:14px;line-height:1.7;margin:0;max-width:52em">' + e(x.body) + "</p>" : "") +
+        ((x.bullets || []).length ? '<ul style="margin:0;padding-left:1.1em;font-size:14px;line-height:1.75;display:grid;gap:2px">' + x.bullets.map((b) => "<li>" + e(b) + "</li>").join("") + "</ul>" : "") +
+        "</article>").join("") + "</div>" +
     ((C.patents || []).length ? '<h2 class="h2">Patents applied</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-4)">' +
       (C.patents || []).map((p) => '<div class="card"><span class="card-kicker">' + e(p.kicker) + '</span><h4 class="card-title">' + e(p.title) + '</h4><p class="card-body">' + e(p.body) + "</p></div>").join("") + "</div>" : "") +
     '<hr class="hr" style="margin:var(--space-8) 0 var(--space-6)">' +
@@ -635,6 +684,42 @@ addEventListener("keydown", (ev) => {
   if (ev.key === "ArrowRight") stepLightbox(1);
   if (ev.key === "ArrowLeft") stepLightbox(-1);
 });
+
+function storyScroll() {
+  if (tab !== "about") return;
+  const vh = innerHeight, rm = matchMedia("(prefers-reduced-motion: reduce)").matches, cl = (v) => Math.max(0, Math.min(1, v));
+  document.querySelectorAll("[data-lit]").forEach((el) => {
+    const r = el.getBoundingClientRect(), ws = el.querySelectorAll(".lw");
+    const n = rm ? ws.length : Math.round(cl((vh * 0.9 - r.top) / (r.height + vh * 0.3)) * ws.length);
+    ws.forEach((w, i) => w.classList.toggle("on", i < n));
+  });
+  const st = document.getElementById("story");
+  if (st) {
+    const r = st.getBoundingClientRect(), p = rm ? 1 : cl((vh * 0.55 - r.top) / (r.height - vh * 0.5));
+    const tr = document.getElementById("trace"), hd = document.getElementById("tracehead");
+    tr.style.strokeDashoffset = 1 - p;
+    try { const L = tr.getTotalLength(), pt = tr.getPointAtLength(L * p); hd.setAttribute("cx", pt.x); hd.setAttribute("cy", pt.y); } catch (x) {}
+    const steps = [...st.querySelectorAll("[data-step]")];
+    let act = 0; steps.forEach((s, i) => { if (s.getBoundingClientRect().top < vh * 0.6) act = i; });
+    steps.forEach((s, i) => s.classList.toggle("on", i === act));
+    st.querySelectorAll("[data-ann]").forEach((g) => g.classList.toggle("on", +g.dataset.ann === act));
+    document.getElementById("storyNum").textContent = String(act + 1).padStart(2, "0");
+    document.getElementById("storyPhase").textContent = steps[act].dataset.phase;
+  }
+  const tj = document.getElementById("traj");
+  if (tj) {
+    const r = tj.getBoundingClientRect(), f = rm ? 1 : cl((vh * 0.6 - r.top) / (r.height - 12));
+    document.getElementById("trajFill").style.height = "calc((100% - 12px) * " + f + ")";
+    tj.querySelectorAll(".traj-item").forEach((it) => it.classList.toggle("on", rm || it.getBoundingClientRect().top < vh * 0.62));
+  }
+  if (!rm) document.querySelectorAll("[data-par]").forEach((el) => {
+    const r = el.parentNode.getBoundingClientRect(), mid = r.top + r.height / 2 - vh / 2;
+    el.style.transform = "translateY(" + (mid * +el.dataset.par).toFixed(1) + "px)";
+  });
+}
+let storyRAF = 0;
+addEventListener("scroll", () => { if (!storyRAF) storyRAF = requestAnimationFrame(() => { storyRAF = 0; storyScroll(); }); }, { passive: true });
+addEventListener("resize", () => storyScroll());
 
 function reveal() {
   const els = [...document.querySelectorAll("#main section > *, #main figure, #main .card")];

@@ -40,10 +40,38 @@
   "about": {
     "heading": "About me and my work",
     "paragraphs": [
-      "I have always been a curious researcher who loves to investigate and make sense out of the data, experiments and the world around me. Be it a school science project on behavior of migratory birds in my hometown or investigating the engine buildup characteristics, I have tried to dive deep and come out with an understanding.",
+      "I have always been a curious researcher who loves to investigate and make sense out of the data, experiments and the world around me. Be it the science congress selected project on migratory birds during school days or investigating the engine buildup characteristics, I have tried to dive deep and come out with an understanding.",
       "My work at ISRO concerns engine development for the Indian space programme: system analysis and the fabrication technologies that make propulsion hardware possible.",
-      "It spans engine cycle and power-balance analysis, start and shutdown transient simulation, pressure-surge modelling, subsystem realisation through additive manufacturing and vacuum brazing, and the critical analysis of test anomalies that turns them into design fixes. Between the simulation and the hardware there is always a test to explain. I like the part where an anomaly trace becomes a design fix — and I take the same habits of attention into research writing and, off the clock, photography.",
+      "It spans engine cycle and power-balance analysis, start and shutdown transient simulation, pressure-surge modelling, subsystem realisation through additive manufacturing and vacuum brazing, and the critical analysis of test anomalies that turns them into design fixes. Between the simulation and the launch there is always a test to explain. I like the part where an anomaly trace becomes a design fix — and I take the same habits of attention into research writing and, off the clock, photography.",
       "I am a Lifetime Member of the Indian Cryogenics Council."
+    ],
+    "lede": "Between the simulation and the launch there is always a test to explain.",
+    "story": [
+      {
+        "phase": "The question",
+        "title": "It started with migratory birds",
+        "body": "I have always been a curious researcher who loves to investigate and make sense out of the data, experiments and the world around me. Be it the science congress selected project on migratory birds during school days or investigating the engine buildup characteristics, I have tried to dive deep and come out with an understanding."
+      },
+      {
+        "phase": "Steady state",
+        "title": "Engine cycle analysis",
+        "body": "Power balance, optimisation and performance prediction. Deciding on paper how the engine balances before any hardware exists."
+      },
+      {
+        "phase": "Start & shutdown",
+        "title": "Engine transients",
+        "body": "Chill-down, start and shutdown sequences, pressure surges in fast-pressurised lines. The seconds where an engine is least predictable — and most interesting."
+      },
+      {
+        "phase": "The hardware",
+        "title": "Joining & fabrication",
+        "body": "Vacuum brazing, dissimilar joints and additive manufacturing of subsystems. Subsystems realised so the analysis has something real to meet."
+      },
+      {
+        "phase": "The trace",
+        "title": "Test anomalies",
+        "body": "Reading the trace and finding the cause — the part I like most, where an anomaly becomes a design fix."
+      }
     ]
   },
   "domains": [
